@@ -1,15 +1,14 @@
 #!/bin/bash
 ##################################
 #SOURCE FOLDER
-SOURCE_DIR="/home/cna_kargar/apriori/"
-INPUT_DIR="/home/cna_kargar/apriori/chess.dat"
+SOURCE_DIR="/home/cna_kargar/BDA/"
+INPUT_DIR="/home/cna_kargar/BDA/chess.dat"
 OUTPUT_DIR="/home/cna/Desktop/BDA"
 SUPPORT_VALUE="3100"
 ##################################
 HADOOP="$( which hadoop )"
 HDFS="$(which hdfs)"
 JAR_FILE="$SOURCE_DIR/BDA_Apriori.jar"
-OUTPUT_DIR="/home/cna_kargar/apriori/"
 ##################################
 HDFS_INPUT_DIR="hdfs://cluster-1-m:8020/input"
 HDFS_OUTPUT_DIR="hdfs://cluster-1-m:8020/output"
@@ -35,13 +34,13 @@ $HADOOP jar $JAR_FILE $HDFS_INPUT_DIR $HDFS_OUTPUT_DIR $SUPPORT_VALUE $ITEMSET_S
 $HDFS dfs -getmerge $HDFS_OUTPUT_DIR/$ITEMSET_SIZE $OUTPUT_FILE_TEMP #&&
 $SORT_OUTPUT #&&
 $TO_CACHE
-#for i in `seq 2 6`;
-#	do
-#	let ITEMSET_SIZE=$i #&&
-#	$HADOOP jar $JAR_FILE $HDFS_INPUT_DIR $HDFS_OUTPUT_DIR $SUPPORT_VALUE $ITEMSET_SIZE #&&
-#	$HDFS dfs -getmerge $HDFS_OUTPUT_DIR/$ITEMSET_SIZE $OUTPUT_FILE_TEMP #&&
-#	#[ -s $OUTPUT_FILE_TEMP ]|| break
-#	$SORT_OUTPUT #&&
-#	$TO_CACHE #&&
-#	echo "Next itemset"
-#done
+for i in `seq 2 10`;
+	do
+	let ITEMSET_SIZE=$i #&&
+	$HADOOP jar $JAR_FILE $HDFS_INPUT_DIR $HDFS_OUTPUT_DIR $SUPPORT_VALUE $ITEMSET_SIZE #&&
+	$HDFS dfs -getmerge $HDFS_OUTPUT_DIR/$ITEMSET_SIZE $OUTPUT_FILE_TEMP #&&
+	[ -s $OUTPUT_FILE_TEMP ]|| exit $?
+	$SORT_OUTPUT #&&
+	$TO_CACHE #&&
+	echo "Next itemset"
+done
