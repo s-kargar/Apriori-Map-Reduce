@@ -11,6 +11,7 @@ data=[]
 with open(input_dir, 'rt') as f:
  for line in f:
     fields=re.split(r'[;,\s]\s*', line.strip())
+    fields=map(int,fields)
     data.append(fields)
 
 first=len(fields)-1
@@ -21,5 +22,6 @@ data=sorted(data, key=itemgetter(first,*nextSet))
 f = open(output_dir, 'a')
 for row in data:
     output=",".join(str(x) for x in row[:len(row)-1])
-    f.write(output+"\t"+row[len(row)-1]+"\n")
+    tostring=str(row[len(row)-1])
+    f.write(output+"\t"+tostring+"\n")
 f.close
