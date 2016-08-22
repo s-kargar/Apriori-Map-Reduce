@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #HDFS Directories --> ENTER HERE
-HDFS_INPUT_DIR="./input"
-HDFS_OUTPUT_DIR="./output"
+HDFS_INPUT_DIR="hdfs://cluster-1-m:8020/input"
+HDFS_OUTPUT_DIR="hdfs://cluster-1-m:8020/output"
 SUPPORT_VALUE="3000"
 NUM_REDUCERS="1"
 ###################################
