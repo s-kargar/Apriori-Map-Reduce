@@ -6,7 +6,7 @@ HDFS_OUTPUT_DIR="hdfs://cluster-1-m:8020/output"
 SUPPORT_VALUE="3000"
 NUM_REDUCERS="1"
 ###################################
-#SOURCE FOLDER
+#Setting variables
 CURRENT_DIR=$(pwd)
 SOURCE_DIR=$CURRENT_DIR
 LOCAL_OUTPUT_DIR=$SOURCE_DIR
@@ -25,7 +25,8 @@ SORT_OUTPUT="python $SORT_SCRIPT $LOCAL_OUTPUT_FILE_TEMP $LOCAL_OUTPUT_FILE"
 ##hdfs output and cache directory
 $HDFS dfs -mkdir -p $HDFS_CACHE_DIR
 ##################################
-# One frequent Itemset
+#Executing Apriori
+# Generating one frequent Itemset
 ITEMSET_SIZE="1"
 start_time1=`date +%s`
 $HADOOP jar $JAR_FILE $HDFS_INPUT_DIR $HDFS_OUTPUT_DIR $SUPPORT_VALUE $ITEMSET_SIZE $NUM_REDUCERS
@@ -36,7 +37,7 @@ $TO_CACHE
 end_time=`date +%s`
 echo "$ITEMSET_SIZE-itemsets time = $((end_time-start_time1))"
 
-# K-frequent itemset
+# Generating K-frequent itemset (k=2... until no larger item set can be generated)
 for i in `seq 2 1000`;
 	do
 	let ITEMSET_SIZE=$i
