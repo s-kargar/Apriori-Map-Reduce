@@ -37,7 +37,7 @@ end_time=`date +%s`
 echo "$ITEMSET_SIZE-itemsets time = $((end_time-start_time1))"
 
 # K-frequent itemset
-for i in `seq 2 10`;
+for i in `seq 2 1000`;
 	do
 	let ITEMSET_SIZE=$i
 	start_time2=`date +%s`
