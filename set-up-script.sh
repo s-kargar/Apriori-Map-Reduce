@@ -14,9 +14,10 @@ HDFS_OUTPUT_DIR="hdfs://cluster-1-m:8020/output"
 HDFS="$(which hdfs)"
 ##################################
 #hdfs setting input
-#$HDFS dfs -rm -r -skipTrash "~/Desktop/BDA/test" ; #REMOVE
-$HDFS dfs -mkdir $HDFS_INPUT_DIR #&&
-$HDFS dfs -put $LOCAL_INPUT_DIR $HDFS_INPUT_DIR #&&
+$HDFS dfs -rm -r -skipTrash "/output" ; #REMOVE
+#$HDFS dfs -mkdir $HDFS_INPUT_DIR #&&
+#$HDFS dfs -put $LOCAL_INPUT_DIR $HDFS_INPUT_DIR #&&
 #$HDFS dfs -mkdir $HDFS_OUTPUT_DIR #&&
 #$HDFS dfs -mkdir $HDFS_CACHE_DIR #&&
 ##################################
+rm output_temp.txt
