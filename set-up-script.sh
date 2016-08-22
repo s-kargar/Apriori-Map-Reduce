@@ -7,8 +7,8 @@ LOCAL_OUTPUT_DIR=$SOURCE_DIR
 LOCAL_INPUT_DIR="$SOURCE_DIR/file.txt"
 ##################################
 #HDFS Directories --> ENTER HERE
-HDFS_INPUT_DIR="$CURRENT_DIR/input"
-HDFS_OUTPUT_DIR="$CURRENT_DIR/output"
+HDFS_INPUT_DIR="hdfs://cluster-1-m:8020/input"
+HDFS_OUTPUT_DIR="hdfs://cluster-1-m:8020/output"
 ###################################################################
 #HDFS_CACHE_DIR="$HDFS_OUTPUT_DIR/cache"
 HDFS="$(which hdfs)"
