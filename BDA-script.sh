@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #HDFS Directories --> ENTER HERE
-HDFS_INPUT_DIR="hdfs://cluster-1-m:8020/input"
-HDFS_OUTPUT_DIR="hdfs://cluster-1-m:8020/output"
+HDFS_INPUT_DIR="./input"
+HDFS_OUTPUT_DIR="./output"
 SUPPORT_VALUE="3000"
 NUM_REDUCERS="1"
 ###################################
@@ -12,6 +12,7 @@ SOURCE_DIR=$CURRENT_DIR
 LOCAL_OUTPUT_DIR=$SOURCE_DIR
 LOCAL_OUTPUT_FILE="$LOCAL_OUTPUT_DIR/output.txt"
 LOCAL_OUTPUT_FILE_TEMP="$LOCAL_OUTPUT_DIR/output_temp.txt"
+
 JAR_FILE="$SOURCE_DIR/BDA_Apriori.jar"
 SORT_SCRIPT="$SOURCE_DIR/py-sort.py"
 HDFS_CACHE_DIR="$HDFS_OUTPUT_DIR/cache"
@@ -24,9 +25,12 @@ SORT_OUTPUT="python $SORT_SCRIPT $LOCAL_OUTPUT_FILE_TEMP $LOCAL_OUTPUT_FILE"
 
 ##hdfs output and cache directory
 $HDFS dfs -mkdir -p $HDFS_CACHE_DIR
+
+LOG_FILE="$CURRENT_DIR/log_`date +%s`.txt" # <----------------------- delete later
 ##################################
-#Executing Apriori
-# Generating one frequent Itemset
+#executing Apriori
+# One frequent Itemset
+{
 ITEMSET_SIZE="1"
 start_time1=`date +%s`
 $HADOOP jar $JAR_FILE $HDFS_INPUT_DIR $HDFS_OUTPUT_DIR $SUPPORT_VALUE $ITEMSET_SIZE $NUM_REDUCERS
@@ -37,8 +41,8 @@ $TO_CACHE
 end_time=`date +%s`
 echo "$ITEMSET_SIZE-itemsets time = $((end_time-start_time1))"
 
-# Generating K-frequent itemset (k=2... until no larger item set can be generated)
-for i in `seq 2 1000`;
+# K-frequent itemset
+for i in `seq 2 10`;
 	do
 	let ITEMSET_SIZE=$i
 	start_time2=`date +%s`
@@ -59,3 +63,4 @@ done
 
 $HDFS dfs -rm -r -skipTrash $HDFS_CACHE_DIR
 $HDFS dfs -put -f $LOCAL_OUTPUT_FILE $HDFS_OUTPUT_DIR
+} &> $LOG_FILE
