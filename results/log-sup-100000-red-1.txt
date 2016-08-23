@@ -1,0 +1,142 @@
+Apriroi Algorithm --> support threshold= 100000, number of reducers= 1
+16/08/22 21:59:08 INFO client.RMProxy: Connecting to ResourceManager at cluster-1-m/10.132.0.3:8032
+16/08/22 21:59:09 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+16/08/22 21:59:09 INFO input.FileInputFormat: Total input paths to process : 1
+16/08/22 21:59:10 INFO mapreduce.JobSubmitter: number of splits:11
+16/08/22 21:59:10 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1471884910344_0045
+16/08/22 21:59:10 INFO impl.YarnClientImpl: Submitted application application_1471884910344_0045
+16/08/22 21:59:10 INFO mapreduce.Job: The url to track the job: http://cluster-1-m:8088/proxy/application_1471884910344_0045/
+16/08/22 21:59:10 INFO mapreduce.Job: Running job: job_1471884910344_0045
+16/08/22 21:59:19 INFO mapreduce.Job: Job job_1471884910344_0045 running in uber mode : false
+16/08/22 21:59:19 INFO mapreduce.Job:  map 0% reduce 0%
+16/08/22 21:59:32 INFO mapreduce.Job:  map 4% reduce 0%
+16/08/22 21:59:33 INFO mapreduce.Job:  map 5% reduce 0%
+16/08/22 21:59:35 INFO mapreduce.Job:  map 8% reduce 0%
+16/08/22 21:59:36 INFO mapreduce.Job:  map 9% reduce 0%
+16/08/22 21:59:38 INFO mapreduce.Job:  map 10% reduce 0%
+16/08/22 21:59:41 INFO mapreduce.Job:  map 13% reduce 0%
+16/08/22 21:59:44 INFO mapreduce.Job:  map 15% reduce 0%
+16/08/22 21:59:45 INFO mapreduce.Job:  map 16% reduce 0%
+16/08/22 21:59:47 INFO mapreduce.Job:  map 18% reduce 0%
+16/08/22 21:59:50 INFO mapreduce.Job:  map 21% reduce 0%
+16/08/22 21:59:53 INFO mapreduce.Job:  map 23% reduce 0%
+16/08/22 21:59:56 INFO mapreduce.Job:  map 26% reduce 0%
+16/08/22 21:59:59 INFO mapreduce.Job:  map 28% reduce 0%
+16/08/22 22:00:00 INFO mapreduce.Job:  map 29% reduce 0%
+16/08/22 22:00:02 INFO mapreduce.Job:  map 31% reduce 0%
+16/08/22 22:00:05 INFO mapreduce.Job:  map 33% reduce 0%
+16/08/22 22:00:06 INFO mapreduce.Job:  map 37% reduce 0%
+16/08/22 22:00:08 INFO mapreduce.Job:  map 38% reduce 0%
+16/08/22 22:00:11 INFO mapreduce.Job:  map 44% reduce 0%
+16/08/22 22:00:12 INFO mapreduce.Job:  map 45% reduce 0%
+16/08/22 22:00:14 INFO mapreduce.Job:  map 49% reduce 0%
+16/08/22 22:00:15 INFO mapreduce.Job:  map 52% reduce 0%
+16/08/22 22:00:19 INFO mapreduce.Job:  map 55% reduce 0%
+16/08/22 22:00:20 INFO mapreduce.Job:  map 56% reduce 0%
+16/08/22 22:00:22 INFO mapreduce.Job:  map 57% reduce 18%
+16/08/22 22:00:25 INFO mapreduce.Job:  map 58% reduce 18%
+16/08/22 22:00:26 INFO mapreduce.Job:  map 60% reduce 18%
+16/08/22 22:00:29 INFO mapreduce.Job:  map 62% reduce 18%
+16/08/22 22:00:31 INFO mapreduce.Job:  map 64% reduce 18%
+16/08/22 22:00:32 INFO mapreduce.Job:  map 65% reduce 18%
+16/08/22 22:00:34 INFO mapreduce.Job:  map 66% reduce 18%
+16/08/22 22:00:37 INFO mapreduce.Job:  map 67% reduce 18%
+16/08/22 22:00:38 INFO mapreduce.Job:  map 69% reduce 18%
+16/08/22 22:00:41 INFO mapreduce.Job:  map 71% reduce 18%
+16/08/22 22:00:43 INFO mapreduce.Job:  map 72% reduce 18%
+16/08/22 22:00:44 INFO mapreduce.Job:  map 73% reduce 18%
+16/08/22 22:00:46 INFO mapreduce.Job:  map 74% reduce 18%
+16/08/22 22:00:47 INFO mapreduce.Job:  map 75% reduce 18%
+16/08/22 22:00:50 INFO mapreduce.Job:  map 76% reduce 18%
+16/08/22 22:00:51 INFO mapreduce.Job:  map 79% reduce 18%
+16/08/22 22:00:52 INFO mapreduce.Job:  map 81% reduce 21%
+16/08/22 22:00:55 INFO mapreduce.Job:  map 82% reduce 21%
+16/08/22 22:00:56 INFO mapreduce.Job:  map 83% reduce 21%
+16/08/22 22:00:58 INFO mapreduce.Job:  map 84% reduce 21%
+16/08/22 22:01:00 INFO mapreduce.Job:  map 87% reduce 21%
+16/08/22 22:01:01 INFO mapreduce.Job:  map 87% reduce 24%
+16/08/22 22:01:02 INFO mapreduce.Job:  map 89% reduce 24%
+16/08/22 22:01:05 INFO mapreduce.Job:  map 90% reduce 24%
+16/08/22 22:01:09 INFO mapreduce.Job:  map 93% reduce 24%
+16/08/22 22:01:10 INFO mapreduce.Job:  map 94% reduce 27%
+16/08/22 22:01:13 INFO mapreduce.Job:  map 97% reduce 27%
+16/08/22 22:01:14 INFO mapreduce.Job:  map 98% reduce 27%
+16/08/22 22:01:16 INFO mapreduce.Job:  map 100% reduce 33%
+16/08/22 22:01:19 INFO mapreduce.Job:  map 100% reduce 57%
+16/08/22 22:01:22 INFO mapreduce.Job:  map 100% reduce 77%
+16/08/22 22:01:25 INFO mapreduce.Job:  map 100% reduce 100%
+16/08/22 22:01:26 INFO mapreduce.Job: Job job_1471884910344_0045 completed successfully
+16/08/22 22:01:27 INFO mapreduce.Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=383396079
+		FILE: Number of bytes written=525803131
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1481932302
+		HDFS: Number of bytes written=6263
+		HDFS: Number of read operations=38
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=11
+		Launched reduce tasks=1
+		Data-local map tasks=3
+		Rack-local map tasks=8
+		Total time spent by all maps in occupied slots (ms)=6753612
+		Total time spent by all reduces in occupied slots (ms)=881532
+		Total time spent by all map tasks (ms)=562801
+		Total time spent by all reduce tasks (ms)=73461
+		Total vcore-milliseconds taken by all map tasks=562801
+		Total vcore-milliseconds taken by all reduce tasks=73461
+		Total megabyte-milliseconds taken by all map tasks=1728924672
+		Total megabyte-milliseconds taken by all reduce tasks=225672192
+	Map-Reduce Framework
+		Map input records=1692082
+		Map output records=299887139
+		Map output bytes=2681438732
+		Map output materialized bytes=140946598
+		Input split bytes=1166
+		Combine input records=318380448
+		Combine output records=28918487
+		Reduce input groups=5267656
+		Reduce shuffle bytes=140946598
+		Reduce input records=10425178
+		Reduce output records=556
+		Spilled Records=39343665
+		Shuffled Maps =11
+		Failed Shuffles=0
+		Merged Map outputs=11
+		GC time elapsed (ms)=5928
+		CPU time spent (ms)=515640
+		Physical memory (bytes) snapshot=2785353728
+		Virtual memory (bytes) snapshot=51178446848
+		Total committed heap usage (bytes)=1996476416
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1481931136
+	File Output Format Counters 
+		Bytes Written=6263
+=========================================================
+Itemset size 1:successful
+=========================================================
+Deleted hdfs://cluster-1-m:8020/output/1
+1-itemsets time = 153seconds
+---------------Next itemset--------------
+16/08/22 22:01:41 INFO client.RMProxy: Connecting to ResourceManager at cluster-1-m/10.132.0.3:8032
+16/08/22 22:01:42 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+16/08/22 22:01:42 INFO input.FileInputFormat: Total input paths to process : 1
+16/08/22 22:01:43 INFO mapreduce.JobSubmitter: number of splits:11
+16/08/22 22:01:43 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1471884910344_0046
+16/08/22 22:01:43 INFO impl.YarnClientImpl: Submitted application application_1471884910344_0046
+16/08/22 22:01:43 INFO mapreduce.Job: The url to track the job: http://cluster-1-m:8088/proxy/application_1471884910344_0046/
+16/08/22 22:01:43 INFO mapreduce.Job: Running job: job_1471884910344_0046
+16/08/22 22:01:54 INFO mapreduce.Job: Job job_1471884910344_0046 running in uber mode : false
+16/08/22 22:01:54 INFO mapreduce.Job:  map 0% reduce 0%
